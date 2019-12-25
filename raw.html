@@ -1,0 +1,325 @@
+<!Doctype html>
+<html>
+    <head>
+      <meta charset="utf-8">
+       <style>
+         * {
+           box-sizing: border-box;
+         }
+         html,body {
+           margin: 0;
+           padding: 0;
+           height: 100vh;
+           width: 100vw;
+           overflow-x: hidden;
+         }
+         .my-image-view {
+           background-color: gray;
+           z-index: -1;
+           width: 100vw;
+           height: 95vh;
+           top: 0;
+           left: 0;
+           right: 0;
+           bottom: 0;
+         }
+
+        .my-image-view > video {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+        }
+         .responsive {
+           height: auto;
+           width: 100%;
+         }
+
+         .full-page {
+           width: 100vw;
+           height: 95vh;
+         }
+         
+         .navbar-wrapper {
+           height: 5vh;
+         }
+
+         .navbar {
+           flex-direction: row;
+         }
+
+         .footer {
+           text-align: center;
+           width: 100%;
+           background-color: blue;
+           height: 2%;
+         }
+
+         .section-padding {
+             padding-left: 4%;
+             padding-right: 4%;
+             padding-bottom: 2%;
+         }
+
+         .flex-item:nth-child(1) {
+            order: 1;
+         }
+
+         .word-wrap {
+           overflow-wrap: break-word;
+           word-break: break-all;
+         }
+
+         img {
+           transition: 1s;
+         }
+
+         img:hover {
+           opacity: .7;
+           box-shadow: 0 0 10px black;
+         }
+
+         .overlay-text:hover {
+       background-color: rgba(0,0,0,0.6);
+       color: white;
+       cursor: pointer;
+         }
+
+         .hamburger-menu {
+           display: none;
+         }
+
+         ul {
+           list-style-type: none;
+         }
+
+         ul > li {
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    display: inline-block;
+    border-color: black;
+    opacity: 0.80;
+    width: auto;
+    height: 100%;
+    text-align: center;
+         }
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  border: 5px solid;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+li > a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.resp-name {
+  font-size: 4em;top:40%; left: 20%;
+}
+
+.resp-desc {
+  font-size: 2.5em;
+top:40%; left: 20%;
+}
+
+ @media screen and (max-width: 700px) {
+    .section1, .section2, .section3, .my-desc-view {
+     flex-direction: column;
+     width:100%;
+    }
+        
+        .navbar {
+          flex-direction: column;
+        }
+        
+        ul {
+          display: none;
+        }
+        .hamburger-menu {
+          height: 100%;
+          width: auto;
+          display: block;
+        }
+
+        .contacts {
+          flex-direction: column;
+        }
+
+        .contact-item {
+          width: 100%;
+          height: auto;
+        }
+
+        .card:nth-child(odd) {
+            border-bottom-style: none;
+        }
+
+         .flex-item:nth-child(2) {
+            order: 1;
+         }
+         .footer {
+           flex-direction: column;
+         }
+         .projects {
+           flex-direction: column;
+         }
+
+         .resp-name {
+  font-size: 2.5em;top:40%; left: 5%;
+}
+
+.resp-desc {
+  font-size: 1.5em;top:40%; left: 5%;
+}
+ }
+       </style>
+
+
+    </head>
+
+
+    <body>
+      <div class="parentDiv">
+          <div class="navbar-wrapper" style="">
+            <div class="hamburger-menu">☰ Menu</div>
+            <ul class="navbar" style="display: flex;">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Our Vision</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="web-main-view full-page" style="position: relative;">
+
+	          <div class="my-image-view" >
+            <video autoplay="autoplay" loop="" muted="" playsinline=""><source src="https://www.datocms-assets.com/14139/1567720984-website-home-page-vignette-video-15s1.mp4" type="video/mp4">Your browser does not support HTML5 video.</video>
+            </div>
+	          <div class="my-desc-view full-page" style="display:flex; position: absolute; top: 0; flex-direction: column;">
+              <div class="resp-name" style="color: black; position: relative;"><strong>AriesFab</strong></div>
+              <div class="resp-name" style="color: black; position: relative;">Interior Design</div>
+              <div class="resp-name" style="overflow-wrap: break-word;color: black; position: relative;">And Architecture</div>
+              <div class="resp-desc" style="overflow-wrap: break-word;color: black; position: relative;">&nbsp;-single place for all design</div>
+            </div>
+          </div>
+          <!-- Section starts from here-->
+          <div style="font-size: 4em; text-align: center;padding: 0.5em;">Our Services</div>
+          <div class="section1" style="display: flex; justify-content: center;">
+            <div class="section1-image section-padding" style="flex-basis: 46%;">
+              <img src="http://ariesfab.com/wp-content/uploads/2019/06/home-service-id-a.jpg" class="responsive overlay-text" alt="None"> 
+            </div>
+            <div class="section-padding" style="display: flex; justify-content: center;flex-direction: column; align-items: center;flex-basis: 46%;">
+                <h1>Interior Designing And Architecture</h1>
+                <p style="font-size: 1.3em;display: flex; justify-content: center;flex-direction: column; align-items: center;">We create custom designs to make sure everything fits perfectly and is truly special to your personal space.
+                  Never heard of us ! Don’t worry sit back, and explore our designs.
+                </p >
+                <div><a href="#">Check out design</a ></div>
+            </div>
+
+          </div>
+            <div class="section2" style="display: flex; justify-content: center;">
+            <div class="section1-image flex-item section-padding" style="flex-basis: 46%;">
+              <img src="http://ariesfab.com/wp-content/uploads/2019/06/home-service-id-a.jpg" class="responsive overlay-text" alt="None"> 
+            </div>
+            <div class="flex-item section-padding" style="display: flex; justify-content: center;flex-direction: column; align-items: center;flex-basis: 46%;">
+                <h1>Interior Landscaping</h1>
+                <p style="font-size: 1.3em;">We help support the health, well-being and productivity of people as well as heal earth using biophilic design.
+                </p >
+                <div><a href="#">Check out our landscaping ideas</a ></div>
+            </div >
+
+          </div>
+                    <div class="section3" style="display: flex; justify-content: center;">
+
+            <div class="section1-image section-padding" style="flex-basis:46%;">
+              <img src="http://ariesfab.com/wp-content/uploads/2019/06/home-service-id-a.jpg" class="responsive overlay-text" alt="None"> 
+            </div>
+            <div class="section-padding" style="padding-bottom:0%; display:flex; justify-content: center;flex-direction: column; align-items: center;flex-basis: 46%;">
+                <h1>Construction</h1>
+                <p style="font-size: 1.3em;">We help you achieve dreams while being guided by our values of competency, reliability and care.
+                </p >
+                <div><a href="#">Check out our projects</a ></div>
+            </div>
+
+          </div>
+          <div style="font-size: 4em; text-align: center;padding: 0.5em;">Projects</div>
+          <div class="projects" style="display:flex; flex-wrap: wrap;">
+             <div class="overlay-text" style="flex-basis: 33.33%;position: relative; justify-content: center;text-align: center;display: flex;">
+               <img src="http://ariesfab.com/wp-content/uploads/2019/06/home-service-id-a.jpg" class="responsive" style="z-index: -1;">
+               <div style="position: absolute; top: 50%; font-size: 1.5em;">Interior Designing</div>
+             </div>
+             <div class="overlay-text" style="flex-basis: 33.33%;position: relative; justify-content: center;text-align: center; display: flex;">
+               <img src="http://ariesfab.com/wp-content/uploads/2019/06/home-service-id-a.jpg" class="responsive" style="z-index: -1;">
+               <div style="position: absolute; top: 50%; font-size: 1.5em;">Bonsai Designing</div >
+             </div >
+             <div class="overlay-text" style="flex-basis: 33.33%;position: relative; justify-content: center;text-align: center; display: flex;">
+               <img src="http://ariesfab.com/wp-content/uploads/2019/06/home-service-id-a.jpg" class="responsive" style="z-index: -1;">
+               <div style="position: absolute;top: 50%; font-size: 1.5em;">3D Printing</div>
+             </div >
+          </div >
+          <div style="height: 5vh;"></div >
+          <div style="font-size: 4em; text-align: center;padding: 0.5em;">Our Team</div>
+          <div style="display: flex;" class="contacts">
+            <!--Image 1-->
+            <div class="card">
+              <img src="http://ariesfab.com/wp-content/uploads/2019/07/architect-gaurav-chaudhary.jpg" alt="Gaurav" class="responsive">
+              <h1>Gaurav Sahlot</h1>
+              <p class="title">Director</p>
+              <p>B.B.Sc, SPA, Delhi</p>
+            </div>
+            <!--Image 2-->
+              <div class="card">
+              <img src="http://ariesfab.com/wp-content/uploads/2019/07/architect-shruti-agarwal.jpg" alt="Shruti" class="responsive">
+              <h1>Shruti Agarwal</h1>
+              <p class="title">Principal Architect</p>
+              <p>B.Arch, SPA, Delhi</p>
+            </div>
+          </div>
+
+          <div style="height: 5vh;"></div >
+          <div class="footer" style="height: auto; width: 100vw;background-color: #1a1a1a;display: flex;color:white;">
+               <div class="item section-padding" style="padding-top: 2%;flex-basis: 50vw;">
+                <a href="https://goo.gl/maps/HEYBspZTi8XjmCHs7" target="_blank">
+                  <img src="http://ariesfab.com/wp-content/uploads/2019/06/home-service-id-a.jpg" class="responsive">
+                  </a>
+               </div >
+               <div class="item section-padding" style="padding-top: 2%;flex-basis: 50vw; background-color: #1a1a1a;">
+                  <div class="section-padding" style="display: flex; justify-content: center;flex-direction: column; align-items: center;flex-basis: 46%;"></div>
+                <h1 style="text-align: left;">Reach Us</h1>
+                <p style="text-align: left; font-size: 1.3em;">F-902. Rajnagar Residency, Rajnagar Extn, Ghaziabad, 201017, UP, India</p >
+                <p style="text-align: left; font-size: 1.3em;">Mob : +91-8178128708</p >
+                <p style="text-align: left; font-size: 1.3em;">Email : gaurav.shunyaja@gmail.com</p >
+            </div >
+               </div>
+          </div >
+          <div style="height: 5vh; width: 100vw;background-color: #000000;text-align: center; position:relative; display: flex;color:white;flex-direction: column;align-items: center;"><p style="position: absolute;">Powered by AriesFab</p></div>
+      </div>
+    </body>
+</html>
